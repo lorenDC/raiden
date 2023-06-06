@@ -24,8 +24,8 @@ def feature_validation(err_text_code,err_field,err_message):
     data_store.scenario.err_message = err_message
 
 ##Assemble objects for feature
-@step("Assemble product objects <prod_code> <version> <active> <category> <name> <description> <sla> <owner_contact_mob> <owner_contact_email> <requiredFeatures_code> <requiredFeatures_version> <requiredFeature_configs> <optionalFeatures_code> <optionalFeatures_version> <optionalFeatures_configs> <features_configs>")
-def req_body(prod_code, version, active, category, name, description, sla, owner_contact_mob, owner_contact_email, requiredFeatures_code,requiredFeatures_version, requiredFeatures_configs,optionalFeatures_code,optionalFeatures_version,optionalFeatures_configs,features_configs):
+@step("Assemble product objects <prod_code> <version> <active> <category> <name> <description> <sla> <owner_contact_mob> <owner_contact_email> <requiredFeatures_code> <requiredFeatures_version> <requiredFeatures_configs> <optionalFeatures_code> <optionalFeatures_version> <optionalFeatures_configs> <product_configs>")
+def req_body(prod_code, version, active, category, name, description, sla, owner_contact_mob, owner_contact_email, requiredFeatures_code,requiredFeatures_version, requiredFeatures_configs,optionalFeatures_code,optionalFeatures_version,optionalFeatures_configs,product_configs):
     
     # format storing of version
     if not(version):
@@ -70,7 +70,7 @@ def req_body(prod_code, version, active, category, name, description, sla, owner
         },
         "requiredFeatures": data_store.scenario.requiredFeatures,
         "optionalFeatures": data_store.scenario.optionalFeatures,
-        "configs": features_configs
+        "configs": product_configs
     }
     print("data_store.scenario.request_body: {}".format(data_store.scenario.product_request_body))
 

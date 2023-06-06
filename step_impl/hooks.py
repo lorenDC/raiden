@@ -12,11 +12,11 @@ def before_suite_hook(context):
     data_store.suite.active_profile = os.getenv('active_profile', 'test')
     try:
         if sys.platform.startswith("linux"):  # Linux OS
-            cx_Oracle.init_oracle_client(lib_dir="/opt/oracle/instantclient_21_4")
+            cx_Oracle.init_oracle_client(lib_dir="/opt/oracle/instantclient_21_10")
         elif sys.platform.startswith("darwin"):  # MacOS
-            cx_Oracle.init_oracle_client(lib_dir="lib/instantclient_19_8")
+            cx_Oracle.init_oracle_client(lib_dir="lib/instantclient_21_10")
         elif sys.platform.startswith("win32") or sys.platform.startswith("cygwin"):  # Windows OS
-            cx_Oracle.init_oracle_client(lib_dir=r"lib\instantclient_21_6")
+            cx_Oracle.init_oracle_client(lib_dir=r"lib\instantclient_21_10")
     except Exception as err:
         print("[ERROR]", err)
         sys.exit(1)

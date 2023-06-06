@@ -7,7 +7,7 @@ Prerequisites:
 1. Docker is running.
 
 ```shell
-docker build . -t image_gauge
+docker build . -t 887374955478.dkr.ecr.ap-southeast-1.amazonaws.com/gauge/raiden:prodregistry060623
 docker run --rm --name container_gauge -v $(pwd):/workspace/gauge-amanda -w="/workspace/gauge-amanda" image_gauge gauge run --env "test_kong_api, test_db" --verbose specs
 ```
 
@@ -23,7 +23,7 @@ gauge run --env "test_kong_api, test_db, proxy_burp" --verbose specs
 open reports/html-report/index.html
 ```
 
-## Usage with API requests running behind ZAP proxy
+## Usage with API requests running behind ZAP proxy'C:\Program Files\Docker\Docker\DockerCli.exe' -SwitchDaemon
 ```shell
 gauge run --env "test_kong_api, test_db, proxy_zap" --verbose specs
 open reports/html-report/index.html

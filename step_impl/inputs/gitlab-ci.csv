@@ -1,0 +1,2 @@
+feat_testCaseID,feat_testCase,feat_code,version,active,category,name,description,sla,owner_contact_mob,owner_contact_email,requiredFeatures_code,requiredFeatures_version,requiredFeatures_configs,optionalFeatures_code,optionalFeatures_version,optionalFeatures_configs,features_configs
+TC01,[RAIDEN_PR_0000 - Validation] Successful creation of Feature with Required Features + Optional Features,Payment Link <timestamp>,,True,ShopeePay,Payment Link - ShopeePay,Checkout feature: Payment Link - ShopeePay,P1D,639123456789,testing@gmail.com,QR,1.0.1,{},QR,3.0.1,{},{}

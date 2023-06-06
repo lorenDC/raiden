@@ -1,0 +1,186 @@
+variables:
+  GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+  INFRASTRUCTURE_PROJECT_PATH: product-registry:infrastructure
+
+stages:
+  - clean
+  - liquibase
+  - build
+  - scan
+  - projects
+
+.gradle-cache: &gradle-cache
+  key: "$CI_COMMIT_REF_SLUG"
+  paths:
+    - .gradle/wrapper
+    - .gradle/caches
+    - .gradle/notifications
+    - "**/*/build"
+
+.retry: &retry
+  retry:
+    max: 2
+    when:
+      - unknown_failure
+      - stuck_or_timeout_failure
+      - runner_system_failure
+      - runner_unsupported
+      - stale_schedule
+      - job_execution_timeout
+      - scheduler_failure
+
+clean:
+  stage: clean
+  image: 887374955478.dkr.ecr.ap-southeast-1.amazonaws.com/eclipse-temurin:17-alpine
+  before_script:
+    - export GRADLE_USER_HOME=$CI_PROJECT_DIR/.gradle
+  script:
+    - ./gradlew $GRADLE_OPTS clean
+  cache:
+    - *gradle-cache
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == "main"
+    - if: $CI_COMMIT_TAG
+  <<: *retry
+  tags:
+    - amanda-java-builder
+
+liquibase:
+  stage: liquibase
+  image: 887374955478.dkr.ecr.ap-southeast-1.amazonaws.com/eclipse-temurin:17-alpine
+  before_script:
+    - export GRADLE_USER_HOME=$CI_PROJECT_DIR/.gradle
+    - apk add --no-cache aws-cli
+    - |
+      AWS_ASSUMEROLE_KEYS=$(aws sts assume-role --role-arn arn:aws:iam::213207498725:role/amanda-devacq-deployer --role-session-name assumed-role --query Credentials.[SecretAccessKey,SessionToken,AccessKeyId] --output text)
+      export AWS_SECRET_ACCESS_KEY=$(echo $AWS_ASSUMEROLE_KEYS | cut -d " " -f1)
+      export AWS_SESSION_TOKEN=$(echo $AWS_ASSUMEROLE_KEYS | cut -d " " -f2)
+      export AWS_ACCESS_KEY_ID=$(echo $AWS_ASSUMEROLE_KEYS | cut -d " " -f3)
+      export AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
+      export AWS_REGION=$AWS_DEFAULT_REGION
+  script:
+    - |
+      export ORG_GRADLE_PROJECT_liquibasePassword=$(aws ssm get-parameter --region $AWS_DEFAULT_REGION --name "/dev/raiden/product-registry/spring.datasource.password" --with-decryption --debug | grep -Eo '"Value": "[^"]+' | cut -c 11-50)
+    - ./gradlew $GRADLE_OPTS $INFRASTRUCTURE_PROJECT_PATH:liquibaseUpdate -PrunList=dev
+  cache:
+    - *gradle-cache
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+    - if: $CI_COMMIT_TAG
+  <<: *retry
+  tags:
+    - amanda-iac
+
+build:
+  stage: build
+  image: 887374955478.dkr.ecr.ap-southeast-1.amazonaws.com/eclipse-temurin:17-alpine
+  before_script:
+    - export GRADLE_USER_HOME=$CI_PROJECT_DIR/.gradle
+  script:
+    - ./gradlew $GRADLE_OPTS --build-cache assemble --stacktrace
+  cache:
+    - *gradle-cache
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == "main"
+    - if: $CI_COMMIT_TAG
+  <<: *retry
+  tags:
+    - amanda-java-builder
+
+dependency-updates-report:
+  stage: scan
+  image: 887374955478.dkr.ecr.ap-southeast-1.amazonaws.com/eclipse-temurin:17-alpine
+  allow_failure: true
+  before_script:
+    - export GRADLE_USER_HOME=$CI_PROJECT_DIR/.gradle
+  script:
+    - ./gradlew dependencyUpdates
+  cache:
+    - *gradle-cache
+  artifacts:
+    paths:
+      - build/dependencyUpdates/report.html
+    when: always
+  rules:
+    - if: $CI_MERGE_REQUEST_ID
+    - if: $CI_COMMIT_BRANCH == "main"
+    - if: $CI_COMMIT_TAG
+  <<: *retry
+  tags:
+    - amanda-java-builder
+
+snyk-scan:
+  stage: scan
+  image: 887374955478.dkr.ecr.ap-southeast-1.amazonaws.com/eclipse-temurin:17-alpine
+  before_script:
+    - export GRADLE_USER_HOME=$CI_PROJECT_DIR/.gradle
+    - |
+      apk add --update npm
+      npm install snyk snyk-to-html
+      export PATH=$PATH:node_modules/.bin
+  script:
+    - snyk auth $SNYK_TOKEN
+    - (snyk test --json --file=build.gradle || [ $? -eq 1 ]) | snyk-to-html -o snyk-results.html
+    - (snyk code test --json --file=build.gradle || [ $? -eq 1 ]) | snyk-to-html -o snyk-code-results.html
+    # - snyk monitor --file=pom.xml -- $MAVEN_CLI_OPTS -s $MAVEN_SETTINGS_XML || [ $? -eq 2 ]
+  artifacts:
+    paths:
+      - snyk-results.html
+      - snyk-code-results.html
+    when: always
+  rules:
+    - if: $CI_MERGE_REQUEST_ID
+    - if: $CI_COMMIT_BRANCH == "main"
+    - if: $CI_COMMIT_TAG
+  <<: *retry
+  tags:
+    - amanda-java-builder
+
+#snyk:
+#  stage: scan
+#  image: 887374955478.dkr.ecr.ap-southeast-1.amazonaws.com/eclipse-temurin:17-alpine
+#  before_script:
+#    - export GRADLE_USER_HOME=$CI_PROJECT_DIR/.gradle
+#    - |
+#      apk add --update npm
+#      npm install snyk snyk-to-html
+#      export PATH=$PATH:node_modules/.bin
+#  script:
+#    - ./runSnyk.sh $SNYK_TOKEN
+#  cache:
+#    - *gradle-cache
+#    - key: "$CI_COMMIT_REF_SLUG"
+#      paths:
+#        - node_modules
+#  artifacts:
+#    paths:
+#      - synk-results.html
+#      - synk-code-results.html
+#    when: always
+#  rules:
+#    - if: $CI_MERGE_REQUEST_ID
+#    - if: $CI_COMMIT_BRANCH == "main"
+#    - if: $CI_COMMIT_TAG
+#  <<: *retry
+#  tags:
+#    - amanda-java-builder
+
+product-registry-rest-api-driver-adapter:
+  stage: projects
+  trigger:
+    include: /cicd/gradle-nested-pipeline.yml
+    strategy: depend
+  rules:
+    #The rules:changes always evaluates to true when used in a pipeline that is not triggered by a push/MR.
+    - if: >
+        $CI_PIPELINE_SOURCE == "merge_request_event" ||
+        $CI_PIPELINE_SOURCE == "push" && ($CI_COMMIT_BRANCH == "main" || $CI_COMMIT_TAG)
+      changes:
+        - build.gradle
+        - "product-registry/**/*"
+  variables:
+    PROJECT_NAME: product-registry/rest-api-driver-adapter
+    PROJECT_PATH: product-registry/rest-api-driver-adapter
+    GRADLE_PROJECT_PATH: product-registry:rest-api-driver-adapter

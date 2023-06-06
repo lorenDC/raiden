@@ -9,7 +9,7 @@ Tags: products, pp
 For declined creation of products
 
 * Assemble product <prod_testCaseID> <prod_testCase>
-* Assemble product objects <prod_code> <version> <active> <category> <name> <description> <sla> <owner_contact_mob> <owner_contact_email> <requiredFeatures_code> <requiredFeatures_version> <requiredFeatures_configs> <optionalFeatures_code> <optionalFeatures_version> <optionalFeatures_configs> <features_configs>
+* Assemble product objects <prod_code> <version> <active> <category> <name> <description> <sla> <owner_contact_mob> <owner_contact_email> <requiredFeatures_code> <requiredFeatures_version> <requiredFeatures_configs> <optionalFeatures_code> <optionalFeatures_version> <optionalFeatures_configs> <product_configs>
 * Assemble product validation <err_text_code> <err_field> <err_message>
 * Request post valid products
 * The product request response code is "400"
