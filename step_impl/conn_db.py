@@ -10,6 +10,7 @@ def establish_conn_db():
         print("Connecting to " + db_name + "...")
         print(os.getenv(db_name + "_connection_type"))
         print(os.getenv(db_name + "_host"))
+        print(os.getenv(db_name + "_dbconn"))
         if(os.getenv(db_name + "_connection_type") == "POSTGRES"):
             data_store.suite[db_name + "_dbconn"] = psycopg2.connect(
                 host=(os.getenv(db_name + "_host")), 
