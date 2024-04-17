@@ -1,0 +1,93 @@
+06-06-2023 21:41:20.374 [Gauge] [INFO] Initializing concepts cache with 0 concepts
+06-06-2023 21:41:20.376 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\products\create_invalid_products.csv
+06-06-2023 21:41:20.376 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\gitlab-ci.csv
+06-06-2023 21:41:20.377 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_valid_features.csv
+06-06-2023 21:41:20.377 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:41:20.377 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\products\create_valid_products.csv
+06-06-2023 21:41:20.378 [Gauge] [INFO] Initializing specs cache with 5 specs
+06-06-2023 21:41:20.378 [Gauge] [DEBUG] Adding specs from c:\Users\MARIA LOREN\Documents\raiden\specs\features\create_features_success.spec
+06-06-2023 21:41:20.378 [Gauge] [DEBUG] Adding specs from c:\Users\MARIA LOREN\Documents\raiden\specs\features\create_features_declined.spec
+06-06-2023 21:41:20.378 [Gauge] [DEBUG] Adding specs from c:\Users\MARIA LOREN\Documents\raiden\specs\products\create_products_declined.spec
+06-06-2023 21:41:20.378 [Gauge] [DEBUG] Adding specs from c:\Users\MARIA LOREN\Documents\raiden\specs\products\create_products_success.spec
+06-06-2023 21:41:20.378 [Gauge] [DEBUG] Adding specs from c:\Users\MARIA LOREN\Documents\raiden\specs\gitlab-test.spec
+06-06-2023 21:41:20.378 [Gauge] [INFO] Initializing steps cache with 5 steps
+06-06-2023 21:41:20.381 [Gauge] [INFO] Starting language runner
+06-06-2023 21:41:20.381 [Gauge] [DEBUG] Watching directory: c:\Users\MARIA LOREN\Documents\raiden\specs
+06-06-2023 21:41:20.382 [Gauge] [DEBUG] Found 3 files
+06-06-2023 21:41:20.382 [Gauge] [DEBUG] Watching directory: c:\Users\MARIA LOREN\Documents\raiden\specs\features
+06-06-2023 21:41:20.383 [Gauge] [DEBUG] Found 2 files
+06-06-2023 21:41:20.383 [Gauge] [DEBUG] Watching directory: c:\Users\MARIA LOREN\Documents\raiden\specs\products
+06-06-2023 21:41:20.383 [Gauge] [DEBUG] Found 2 files
+06-06-2023 21:41:26.007 [Gauge] [INFO] Initializing concepts cache with 0 concepts
+06-06-2023 21:41:26.009 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\gitlab-ci.csv
+06-06-2023 21:41:26.009 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:41:26.009 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\products\create_valid_products.csv
+06-06-2023 21:41:26.009 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\products\create_invalid_products.csv
+06-06-2023 21:41:26.009 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_valid_features.csv
+06-06-2023 21:41:26.010 [Gauge] [INFO] Initializing specs cache with 5 specs
+06-06-2023 21:41:26.010 [Gauge] [DEBUG] Adding specs from c:\Users\MARIA LOREN\Documents\raiden\specs\products\create_products_declined.spec
+06-06-2023 21:41:26.010 [Gauge] [DEBUG] Adding specs from c:\Users\MARIA LOREN\Documents\raiden\specs\features\create_features_success.spec
+06-06-2023 21:41:26.010 [Gauge] [DEBUG] Adding specs from c:\Users\MARIA LOREN\Documents\raiden\specs\features\create_features_declined.spec
+06-06-2023 21:41:26.010 [Gauge] [DEBUG] Adding specs from c:\Users\MARIA LOREN\Documents\raiden\specs\products\create_products_success.spec
+06-06-2023 21:41:26.010 [Gauge] [DEBUG] Adding specs from c:\Users\MARIA LOREN\Documents\raiden\specs\gitlab-test.spec
+06-06-2023 21:41:26.010 [Gauge] [INFO] Initializing steps cache with 5 steps
+06-06-2023 21:41:26.011 [Gauge] [INFO] Starting language runner
+06-06-2023 21:41:26.011 [Gauge] [DEBUG] Watching directory: c:\Users\MARIA LOREN\Documents\raiden\specs
+06-06-2023 21:41:26.012 [Gauge] [DEBUG] Found 3 files
+06-06-2023 21:41:26.012 [Gauge] [DEBUG] Watching directory: c:\Users\MARIA LOREN\Documents\raiden\specs\features
+06-06-2023 21:41:26.012 [Gauge] [DEBUG] Found 2 files
+06-06-2023 21:41:26.012 [Gauge] [DEBUG] Watching directory: c:\Users\MARIA LOREN\Documents\raiden\specs\products
+06-06-2023 21:41:26.012 [Gauge] [DEBUG] Found 2 files
+06-06-2023 21:41:26.923 [python] [INFO] Python: 3.11.2
+06-06-2023 21:41:26.923 [python] [DEBUG] Loading step implementations from c:\Users\MARIA LOREN\Documents\raiden\step_impl dirs.
+06-06-2023 21:41:27.501 [python] [DEBUG] Starting grpc server..
+06-06-2023 21:41:27.519 [Gauge] [DEBUG] Attempting to connect to grpc server at port: 54713
+06-06-2023 21:41:27.523 [Gauge] [DEBUG] Successfully made the connection with runner with port: 54713
+06-06-2023 21:41:27.523 [Gauge] [INFO] LangServer: reading on stdin, writing on stdout
+06-06-2023 21:41:28.015 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:41:28.016 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_valid_features.csv
+06-06-2023 21:41:28.017 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\gitlab-ci.csv
+06-06-2023 21:41:28.019 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\products\create_invalid_products.csv
+06-06-2023 21:41:28.019 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\products\create_valid_products.csv
+06-06-2023 21:41:28.019 [Gauge] [DEBUG] Validation started.
+06-06-2023 21:41:28.029 [Gauge] [DEBUG] Validation completed.
+06-06-2023 21:43:23.519 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:43:23.708 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:43:23.709 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_valid_features.csv
+06-06-2023 21:43:23.709 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\gitlab-ci.csv
+06-06-2023 21:43:23.710 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\products\create_invalid_products.csv
+06-06-2023 21:43:23.712 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\products\create_valid_products.csv
+06-06-2023 21:43:23.712 [Gauge] [DEBUG] Validation started.
+06-06-2023 21:43:23.722 [Gauge] [DEBUG] Validation completed.
+06-06-2023 21:43:25.086 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:43:27.252 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:43:30.287 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:43:33.509 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:43:35.058 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:43:42.750 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:43:54.540 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:45:14.046 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:45:20.237 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:45:28.863 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:47:53.788 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:48:11.139 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:48:17.717 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:48:48.843 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:49:28.823 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:49:38.859 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:50:26.192 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:51:28.200 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 22:06:20.374 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 22:06:20.375 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_valid_features.csv
+06-06-2023 22:06:20.376 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\gitlab-ci.csv
+06-06-2023 22:06:20.376 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\products\create_invalid_products.csv
+06-06-2023 22:06:20.376 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\products\create_valid_products.csv
+06-06-2023 22:06:20.376 [Gauge] [DEBUG] Validation started.
+06-06-2023 22:06:20.388 [Gauge] [DEBUG] Validation completed.
+06-06-2023 22:06:32.183 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 22:07:24.130 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 22:33:31.861 [Gauge] [DEBUG] Reading data file: c:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+07-06-2023 00:01:45.032 [python] [DEBUG] KillProcessrequest received
+07-06-2023 00:01:45.584 [Gauge] [DEBUG] Runner with PID:32468 has exited
+07-06-2023 00:01:45.588 [Gauge] [INFO] Connection closed
+07-06-2023 00:01:45.588 [Gauge] [ERROR] Unable to log error 'Connection closed' to LSP: jsonrpc2: connection is closed

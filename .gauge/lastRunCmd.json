@@ -1,0 +1,10 @@
+[
+	"C:\\Program Files\\Gauge\\bin\\gauge.exe",
+	"run",
+	"--env",
+	"dev_api, dev_db",
+	"--verbose",
+	"--table-rows",
+	"1",
+	"specs\\features\\create_features_declined.spec"
+]

@@ -1,0 +1,129 @@
+06-06-2023 21:44:53.843 [Gauge] [DEBUG] Created gauge_screenshots_dir at C:\Users\MARIA LOREN\Documents\raiden\.gauge\screenshots
+06-06-2023 21:44:53.844 [Gauge] [DEBUG] Plugin html-report is already installed.
+06-06-2023 21:44:53.845 [Gauge] [DEBUG] Plugin python is already installed.
+06-06-2023 21:44:53.845 [Gauge] [DEBUG] Parsing started.
+06-06-2023 21:44:53.845 [Gauge] [DEBUG] Started concepts parsing.
+06-06-2023 21:44:53.985 [Gauge] [DEBUG] 0 concepts parsing completed.
+06-06-2023 21:44:53.985 [Gauge] [DEBUG] Started specifications parsing.
+06-06-2023 21:44:53.985 [Gauge] [DEBUG] Reading data file: C:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:44:53.986 [Gauge] [DEBUG] 1 specifications parsing completed.
+06-06-2023 21:44:53.986 [Gauge] [DEBUG] Parsing completed.
+06-06-2023 21:44:54.040 [python] [ERROR] N
+06-06-2023 21:44:54.040 [python] [ERROR] o Python at '"C:\Users\p.maria.delacruz\AppData\Local\Programs\Python\Python310\python.exe'
+06-06-2023 21:44:54.062 [python] [ERROR] N
+06-06-2023 21:44:54.062 [python] [ERROR] o Python at '"C:\Users\p.maria.delacruz\AppData\Local\Programs\Python\Python310\python.exe'
+06-06-2023 21:44:54.076 [Gauge] [ERROR] Error occurred while waiting for runner process to finish.
+Error : exit status 103
+06-06-2023 21:44:54.077 [Gauge] [CRITICAL] Failed to start gauge API: Error occurred while waiting for runner process to finish.
+Error : exit status 103
+06-06-2023 21:51:39.144 [Gauge] [DEBUG] Created gauge_screenshots_dir at C:\Users\MARIA LOREN\Documents\raiden\.gauge\screenshots
+06-06-2023 21:51:39.145 [Gauge] [DEBUG] Plugin python is already installed.
+06-06-2023 21:51:39.145 [Gauge] [DEBUG] Plugin html-report is already installed.
+06-06-2023 21:51:39.145 [Gauge] [DEBUG] Parsing started.
+06-06-2023 21:51:39.145 [Gauge] [DEBUG] Started concepts parsing.
+06-06-2023 21:51:39.216 [Gauge] [DEBUG] 0 concepts parsing completed.
+06-06-2023 21:51:39.216 [Gauge] [DEBUG] Started specifications parsing.
+06-06-2023 21:51:39.216 [Gauge] [DEBUG] Reading data file: C:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 21:51:39.217 [Gauge] [DEBUG] 1 specifications parsing completed.
+06-06-2023 21:51:39.217 [Gauge] [DEBUG] Parsing completed.
+06-06-2023 21:51:39.555 [python] [ERROR] '"C:\Users\MARIA LOREN\Documents\raiden\venv\Scripts\python.exe -m pip install getgauge==0.3.17 --user"' is not recognized as an internal or external command,
+06-06-2023 21:51:39.555 [python] [ERROR] operable program or batch file.
+06-06-2023 21:51:39.558 [python] [ERROR] Traceback (most recent call last):
+06-06-2023 21:51:39.558 [python] [ERROR] File "C:\Users\MARIA LOREN\AppData\Roaming\gauge\plugins\python\0.3.17\check_and_install_getgauge.py", line 32, in assert_versions
+06-06-2023 21:51:39.558 [python] [ERROR] getgauge_version = pkg_resources.get_distribution('getgauge').version
+06-06-2023 21:51:39.558 [python] [ERROR] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+06-06-2023 21:51:39.558 [python] [ERROR] File "C:\Users\MARIA LOREN\Documents\raiden\venv\Lib\site-packages\pkg_resources\__init__.py", line 478, in get_distribution
+06-06-2023 21:51:39.559 [python] [ERROR] dist = get_provider(dist)
+06-06-2023 21:51:39.559 [python] [ERROR] ^^^^^^^^^^^^^^^^^^
+06-06-2023 21:51:39.559 [python] [ERROR] File "C:\Users\MARIA LOREN\Documents\raiden\venv\Lib\site-packages\pkg_resources\__init__.py", line 354, in get_provider
+06-06-2023 21:51:39.559 [python] [ERROR] return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+06-06-2023 21:51:39.559 [python] [ERROR] ^^^^^^^^^^^^^^^^^^^^^^^^^
+06-06-2023 21:51:39.559 [python] [ERROR] File "C:\Users\MARIA LOREN\Documents\raiden\venv\Lib\site-packages\pkg_resources\__init__.py", line 909, in require
+06-06-2023 21:51:39.559 [python] [ERROR] needed = self.resolve(parse_requirements(requirements))
+06-06-2023 21:51:39.560 [python] [ERROR] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+06-06-2023 21:51:39.560 [python] [ERROR] File "C:\Users\MARIA LOREN\Documents\raiden\venv\Lib\site-packages\pkg_resources\__init__.py", line 795, in resolve
+06-06-2023 21:51:39.560 [python] [ERROR] raise DistributionNotFound(req, requirers)
+06-06-2023 21:51:39.560 [python] [ERROR] pkg_resources.DistributionNotFound: The 'getgauge' distribution was not found and is required by the application
+06-06-2023 21:51:39.561 [python] [ERROR] During handling of the above exception, another exception occurred:
+06-06-2023 21:51:39.561 [python] [ERROR] Traceback (most recent call last):
+06-06-2023 21:51:39.561 [python] [ERROR] File "C:\Users\MARIA LOREN\AppData\Roaming\gauge\plugins\python\0.3.17\check_and_install_getgauge.py", line 40, in <module>
+06-06-2023 21:51:39.561 [python] [ERROR] assert_versions()
+06-06-2023 21:51:39.561 [python] [ERROR] File "C:\Users\MARIA LOREN\AppData\Roaming\gauge\plugins\python\0.3.17\check_and_install_getgauge.py", line 36, in assert_versions
+06-06-2023 21:51:39.561 [python] [ERROR] install_getgauge("getgauge=="+expected_gauge_version)
+06-06-2023 21:51:39.561 [python] [ERROR] File "C:\Users\MARIA LOREN\AppData\Roaming\gauge\plugins\python\0.3.17\check_and_install_getgauge.py", line 20, in install_getgauge
+06-06-2023 21:51:39.561 [python] [ERROR] check_output([" ".join(install_cmd)], shell=True)
+06-06-2023 21:51:39.561 [python] [ERROR] File "C:\Program Files\Python311\Lib\subprocess.py", line 466, in check_output
+06-06-2023 21:51:39.561 [python] [ERROR] return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+06-06-2023 21:51:39.562 [python] [ERROR] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+06-06-2023 21:51:39.562 [python] [ERROR] File "C:\Program Files\Python311\Lib\subprocess.py", line 571, in run
+06-06-2023 21:51:39.562 [python] [ERROR] raise CalledProcessError(retcode, process.args,
+06-06-2023 21:51:39.562 [python] [ERROR] subprocess.CalledProcessError: Command '['C:\\Users\\MARIA LOREN\\Documents\\raiden\\venv\\Scripts\\python.exe -m pip install getgauge==0.3.17 --user']' returned non-zero exit status 1.
+06-06-2023 21:51:39.658 [python] [ERROR] Traceback (most recent call last):
+06-06-2023 21:51:39.658 [python] [ERROR] File "C:\Users\MARIA LOREN\AppData\Roaming\gauge\plugins\python\0.3.17\start.py", line 9, in <module>
+06-06-2023 21:51:39.658 [python] [ERROR] import grpc
+06-06-2023 21:51:39.658 [python] [ERROR] ModuleNotFoundError: No module named 'grpc'
+06-06-2023 21:51:39.679 [Gauge] [ERROR] Error occurred while waiting for runner process to finish.
+Error : exit status 1
+06-06-2023 21:51:39.679 [Gauge] [CRITICAL] Failed to start gauge API: Error occurred while waiting for runner process to finish.
+Error : exit status 1
+06-06-2023 22:06:38.118 [Gauge] [DEBUG] Created gauge_screenshots_dir at C:\Users\MARIA LOREN\Documents\raiden\.gauge\screenshots
+06-06-2023 22:06:38.119 [Gauge] [DEBUG] Plugin python is already installed.
+06-06-2023 22:06:38.119 [Gauge] [DEBUG] Plugin html-report is already installed.
+06-06-2023 22:06:38.119 [Gauge] [DEBUG] Parsing started.
+06-06-2023 22:06:38.119 [Gauge] [DEBUG] Started concepts parsing.
+06-06-2023 22:06:38.342 [Gauge] [DEBUG] 0 concepts parsing completed.
+06-06-2023 22:06:38.342 [Gauge] [DEBUG] Started specifications parsing.
+06-06-2023 22:06:38.342 [Gauge] [DEBUG] Reading data file: C:\Users\MARIA LOREN\Documents\raiden\step_impl\inputs\features\create_invalid_features.csv
+06-06-2023 22:06:38.342 [Gauge] [DEBUG] 1 specifications parsing completed.
+06-06-2023 22:06:38.342 [Gauge] [DEBUG] Parsing completed.
+06-06-2023 22:06:38.947 [python] [INFO] Python: 3.11.2
+06-06-2023 22:06:38.947 [python] [DEBUG] Loading step implementations from C:\Users\MARIA LOREN\Documents\raiden\step_impl dirs.
+06-06-2023 22:06:39.174 [Gauge] [DEBUG] Checking updates...
+06-06-2023 22:06:39.175 [Gauge] [DEBUG] Downloading https://downloads.gauge.org/plugin/html-report?l=python&p=html-report,python,screenshot&o=windows&a=amd64
+06-06-2023 22:06:39.350 [python] [DEBUG] Starting grpc server..
+06-06-2023 22:06:39.356 [Gauge] [DEBUG] Attempting to connect to grpc server at port: 57541
+06-06-2023 22:06:39.356 [Gauge] [DEBUG] Successfully made the connection with runner with port: 57541
+06-06-2023 22:06:39.357 [Gauge] [DEBUG] Validation started.
+06-06-2023 22:06:39.390 [Gauge] [DEBUG] Validation completed.
+06-06-2023 22:06:39.391 [Gauge] [DEBUG] Run started
+06-06-2023 22:06:39.392 [Gauge] [DEBUG] Starting Html Report plugin
+06-06-2023 22:06:39.796 [Gauge] [DEBUG] Downloading https://downloads.gauge.org/plugin/python?l=python&p=html-report,python,screenshot&o=windows&a=amd64
+06-06-2023 22:06:39.853 [Gauge] [DEBUG] Downloading https://downloads.gauge.org/plugin/screenshot?l=python&p=html-report,python,screenshot&o=windows&a=amd64
+06-06-2023 22:06:39.979 [html-report] [DEBUG] Setting MaxRecvMsgSize = 1024 MB
+06-06-2023 22:06:39.979 [Gauge] [DEBUG] Attempting to connect to grpc server at port: 57548
+06-06-2023 22:06:39.980 [Gauge] [DEBUG] Successfully made the connection with plugin with port: 57548
+06-06-2023 22:06:39.980 [Gauge] [DEBUG] Initialising suite data store.
+06-06-2023 22:06:40.015 [python] [CRITICAL] Exception occurred while loading step implementations from file: step_impl\common.py.
+Traceback (most recent call last):
+  File "C:\Users\MARIA LOREN\Documents\raiden\venv\Lib\site-packages\getgauge\impl_loader.py", line 65, in _import_file
+    m = importlib.import_module(module_name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1149, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\MARIA LOREN\Documents\raiden\step_impl\common.py", line 3, in <module>
+    import step_impl.conn_db as conn_db
+  File "C:\Users\MARIA LOREN\Documents\raiden\step_impl\conn_db.py", line 2, in <module>
+    import cx_Oracle
+ModuleNotFoundError: No module named 'cx_Oracle'
+06-06-2023 22:06:40.031 [Gauge] [ERROR] Error Message: error reading from server: read tcp 127.0.0.1:57542->127.0.0.1:57541: wsarecv: An existing connection was forcibly closed by the remote host.
+06-06-2023 22:06:40.031 [Gauge] [ERROR] Stacktrace: 
+06-06-2023 22:06:40.031 [Gauge] [ERROR] Error Message: Runner is not Alive
+06-06-2023 22:06:40.031 [Gauge] [ERROR] Stacktrace: 
+06-06-2023 22:06:40.032 [html-report] [DEBUG] Transformed SuiteResult to report structure
+06-06-2023 22:06:40.046 [Gauge] [ERROR] Error occurred while waiting for runner process to finish.
+Error : exit status 1
+06-06-2023 22:06:40.109 [Gauge] [DEBUG] Sending kill message to Html Report plugin.
+06-06-2023 22:06:40.109 [html-report] [INFO] Successfully generated html-report to => C:\Users\MARIA LOREN\Documents\raiden\reports\html-report\index.html
+06-06-2023 22:06:40.109 [html-report] [DEBUG] Done generating HTML report using theme from C:\Users\MARIA LOREN\AppData\Roaming\gauge\plugins\html-report\4.2.0\themes\default
+06-06-2023 22:06:42.157 [Gauge] [ERROR] Failed to kill Runner: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp 127.0.0.1:57541: connectex: No connection could be made because the target machine actively refused it."
+06-06-2023 22:06:42.157 [Gauge] [INFO] Specifications:	0 executed	0 passed	0 failed	0 skipped
+06-06-2023 22:06:42.158 [Gauge] [INFO] Scenarios:	0 executed	0 passed	0 failed	0 skipped
+06-06-2023 22:06:42.159 [Gauge] [INFO] 
+Total time taken: 639ms
