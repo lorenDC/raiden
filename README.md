@@ -7,8 +7,8 @@ Prerequisites:
 1. Docker is running.
 
 ```shell
-docker build . -t 887374955478.dkr.ecr.ap-southeast-1.amazonaws.com/gauge/raiden:prodregistry060623
-docker run --rm --name container_gauge -v $(pwd):/workspace/gauge-amanda -w="/workspace/gauge-amanda" image_gauge gauge run --env "test_kong_api, test_db" --verbose specs
+docker build . -t 887374955478.dkr.ecr.ap-southeast-1.amazonaws.com/gauge/raiden:prodregistry060723
+ddocker run --rm --name container_gauge -v C:\Users\p.maria.delacruz\Documents\R2\gauge-product-registry:/workspace/gauge-product-registry -w="/workspace/gauge-product-registry" 887374955478.dkr.ecr.ap-southeast-1.amazonaws.com/gauge/raiden:prodregistry060723 gauge run --env "dev_api, dev_db" --verbose specs
 ```
 
 ## Usage without Docker

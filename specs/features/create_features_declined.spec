@@ -2,7 +2,7 @@
 
 Creation of valid data for basic feature API
 
-table:/step_impl/inputs/features/create_invalid_features.csv
+table: step_impl/inputs/features/create_invalid_features.csv
 
 ## Declined scenarios for features API	
 Tags: features, ff	
